@@ -1,13 +1,13 @@
 <?php
-/*$servername = "goingontrip.com";
+$servername = "goingontrip.com";
 $username = "goingont";
 $password = "poohnut419";
-$dbname = "goingont_poem";*/
+$dbname = "goingont_poem";
 
-$dbname = "poem_research_classify"; 
+/* $dbname = "poem_research_classify"; 
 $servername = "plearnjai.com";
 $username = "plearnja_poohnut";
-$password = "PoohNut419";
+$password = "PoohNut419"; */
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
