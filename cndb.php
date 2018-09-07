@@ -1,13 +1,8 @@
 <?php
-$servername = "goingontrip.com";
-$username = "goingont";
-$password = "poohnut419";
-$dbname = "goingont_poem";
-
-/* $dbname = "poem_research_classify"; 
+$dbname = "plearnja_poem"; 
 $servername = "plearnjai.com";
 $username = "plearnja_poohnut";
-$password = "PoohNut419"; */
+$password = "ExRXqS2A"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,13 +11,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT poet_ID, poet_name, poet_type FROM poet_tbl";
+$sql = "SELECT poem_ID, poem_name, poem_poet_id FROM poem_tbl";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["poet_ID"]. " - Name: " . $row["poet_name"]. " " . $row["poet_type"]. "<br>";
+        echo "id: " . $row["poem_ID"]. " - Name: " . $row["poem_name"]. " " . $row["poem_poet_id"]. "<br>";
     }
 } else {
     echo "0 results";
